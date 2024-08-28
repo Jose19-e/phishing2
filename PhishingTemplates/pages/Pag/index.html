@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia sesión en Spotify</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(360deg, #000000, #2d2d2d); 
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container {
+            max-width: 550px;
+            margin: auto;
+            padding: 5%;
+            background-color: #111111;
+            border-radius: 10px;
+        }
+        .spotify-logo {
+            display: block;
+            margin: 0 auto 20px;
+            height: 30px;
+            width: 30px;
+        }
+        .login-button {
+            background-color: #188f42;
+            color: #060606;
+            font-weight: bold;
+        }
+        .login-button:hover {
+            background-color: #1aa34a;
+        }
+        .input-field {
+            background-color: #111111;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            border: 1px solid #fff;
+        }
+        label {
+            color: #fff;
+            font-weight: bold;
+            text-align: left;
+        }
+        footer {
+            background-color: #100f0f;
+            color: #b3b3b3;
+            padding: 1rem 0;
+            margin-top: auto; 
+        }
+        a {
+            color: #fff;
+            font-weight: bold;
+        }
+        p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container text-center">
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/spotify-white-icon.png" alt="Spotify Logo" class="spotify-logo w-32">
+
+    <h1 class="text-xl mb-5 font-bold">Inicia sesión en Spotify</h1>
+
+    <div class="mb-4">
+        <button class="w-full border text-white py-2 mb-2 rounded-full flex items-center justify-center">
+            <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/google-g-2015-logo.png" alt="Google Logo" width="20" height="20" class="mr-2">
+            Continuar con Google
+        </button>
+        <button class="w-full border text-white py-2 mb-2 rounded-full flex items-center justify-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" width="20" height="20" class="mr-2">
+            Continuar con Facebook
+        </button>
+        <button class="w-full border text-white py-2 mb-2 rounded-full flex items-center justify-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Apple_logo_white.svg/640px-Apple_logo_white.svg.png" alt="Apple Logo" width="20" height="20" class="mr-2">
+            Continuar con Apple
+        </button>
+        
+        <button class="w-full border text-white py-2 mb-4 rounded-full">Continuar con número de teléfono</button>
+    </div>
+
+    <form action="http://localhost:3000/login" method="POST">
+        <div class="mb-4 text-left">
+            <label for="username">Email o nombre de usuario</label>
+            <input type="text" id="username" name="username" placeholder="Email o nombre de usuario" class="input-field w-full p-3 mb-3">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Contraseña" class="input-field w-full p-3">
+        </div>
+        <button type="submit" class="login-button w-full py-3 rounded-full">Iniciar Sesión</button>
+    </form>
+
+    <div class="mt-4 text-xs">
+        <a href="#">¿Has olvidado tu contraseña?</a>
+    </div>
+
+    <div class="mt-4 text-xs">
+        <p>¿No tienes cuenta? <a href="#">Regístrate en Spotify</a></p>
+    </div>
+</div>
+
+<footer class="text-gray-500 text-sm text-center">
+    <p>Este sitio está protegido por reCAPTCHA y se aplican la <a href="#">Política de Privacidad</a> y los <a href="#"">Términos de Servicio</a> de Google.</p>
+</footer>
+
+</body>
+</html>
